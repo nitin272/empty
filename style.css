@@ -1,0 +1,78 @@
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --header-bg-color: #007bff;
+    --header-text-color: #ffffff;
+    --row-odd-bg-color: #ffffff;
+    --row-even-bg-color: #f2f2f2;
+    --highlight-color: #ffc107;
+    --lunch-bg-color: #ffeb3b;
+    --border-color: #dee2e6;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  table {
+    border-collapse: collapse;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  th {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    font-size: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--row-even-bg-color);
+  }
+  
+  tr:nth-child(odd) {
+    background-color: var(--row-odd-bg-color);
+  }
+  
+  tr:hover {
+    background-color: var(--highlight-color);
+    cursor: pointer;
+  }
+  
+  .r {
+    background-color: var(--lunch-bg-color);
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+  
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    th, td {
+      padding: 10px;
+    }
+  }
+  
